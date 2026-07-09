@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page PCU</title>
+        <link rel="stylesheet" href="Login.CSS">
+    </head>
+    <body>
+        
+       <form id="loginForm" action="login-handler.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+         <script>
+          document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            window.location.href = 'Home.HTML';
+          });
+        </script>
+
+
+    </body>
+</html>
