@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <title>Login page PCU</title>
+        <link rel="stylesheet" href="Login.CSS">
     </head>
     <body>
-        <h1 id="green">Welcome to the Home Page</h1>
-        <h1>This is the home page of the website.</h1>
-        <a href="Login.HTML">Logout</a>
-        <a href="Emergency.HTML">Emergency</a>
-        <link rel="stylesheet" href="Home.CSS">  
-    </body>    
+        
+       <form id="loginForm" action="login-handler.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+         <script>
+          document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            window.location.href = 'Home.HTML';
+          });
+        </script>
+
+
+    </body>
 </html>
